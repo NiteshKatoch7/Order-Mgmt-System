@@ -124,6 +124,7 @@ exports.createOrder = async (req, res) => {
         const newOrder = new orderSchema(order);
         await newOrder.save();  
         
+        // Produce order event to Kafka
         await produceOrderEvent(newOrder);
         
         res.status(201).json({

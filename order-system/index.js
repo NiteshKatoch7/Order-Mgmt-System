@@ -3,7 +3,6 @@ const app = express()
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const customRoutes = require('./routes/order.routes');
-const swaggerDocument = require('./swagger/swagger.json');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 dotenv.config();
